@@ -5,3 +5,6 @@ class TransactionsConfig(AppConfig):
     name = 'apps.transactions'
     label = 'transactions'
     verbose_name = 'Transactions'
+
+    def ready(self):
+        import apps.transactions.signals
